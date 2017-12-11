@@ -1,5 +1,5 @@
 
-# Scala eXchange 2017 Workshop 2017
+# Scala eXchange 2017 Workshop
 
 ### Follow the setup steps at [EasyForger setup](https://github.com/easyforger/easyforger/blob/master/doc/setup.md).
 
