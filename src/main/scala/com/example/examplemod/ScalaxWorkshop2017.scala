@@ -1,6 +1,7 @@
 package com.example.examplemod
 
 import com.easyforger.base.EasyForger
+import net.minecraft.init.Items
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.Mod.EventHandler
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
@@ -16,6 +17,11 @@ object ScalaxWorkshop2017 extends EasyForger {
     creatures( this,
       creeper(
         explosionRadius = 100
+      ),
+      zombie(
+        common(
+          heldItemMainHand = Items.DIAMOND_SWORD
+        )
       )
     )
   }

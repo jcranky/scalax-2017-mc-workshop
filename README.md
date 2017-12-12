@@ -14,3 +14,39 @@
 * Test the new EFCreeper explosion.
 
 * You can compare the explosion radius by exploding a normal Creeper.
+
+### Add a custom held item for zombies
+
+* Not all items can be held, experiment!
+
+```scala
+  zombie(
+    common(
+      heldItemMainHand = Items.DIAMOND_SWORD
+    )
+  )
+```
+
+### 4
+
+### 5
+
+### 6
+
+### 7
+
+### 8
+
+### 9
+
+### 10
+
+### 11
+
+### 12
+
+### 13
+
+### 14
+
+### 15
