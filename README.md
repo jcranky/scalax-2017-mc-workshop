@@ -31,7 +31,20 @@
 
 * Now make the skeleton hold something.
 
-### 4
+### Configure the items dropped by the Skeleton
+
+* Copy the json files to the proper asset location.
+
+Json file: [Skeleton Drop Json](resources/ef_skeleton.json)
+
+Copy to folder: `src/main/resources/assets/$mod_id/loot_tables/entities`
+
+* Setup our skeleton to use that drop definition:
+
+```scala
+dropJson = s"$modId:entities/ef_skeleton"
+```
+* Do the same for the zombie.
 
 ### 5
 

@@ -20,7 +20,14 @@ object ScalaxWorkshop2017 extends EasyForger {
       ),
       zombie(
         common(
-          heldItemMainHand = Items.DIAMOND_SWORD
+          heldItemMainHand = Items.DIAMOND_SWORD,
+          dropJson = s"$modId:entities/ef_zombie"
+        )
+      ),
+      skeleton(
+        common(
+          heldItemOffHand = Items.STONE_SWORD,
+          dropJson = s"$modId:entities/ef_skeleton"
         )
       )
     )
