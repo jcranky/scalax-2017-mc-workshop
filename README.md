@@ -3,7 +3,9 @@
 
 ### Follow the setup steps at [EasyForger setup](https://github.com/easyforger/easyforger/blob/master/doc/setup.md).
 
-* While waiting for the setup to complete, explain how the environment works.
+* While waiting for the setup to complete, understand the environment a bit.
+
+* Read the name of the tasks being run by gradle, they give a good idea of what is happening.
 
 ### Follow the first mod steps at [Your first mod](https://github.com/easyforger/easyforger/blob/master/doc/first-mod.md).
 
@@ -26,6 +28,8 @@
     )
   )
 ```
+
+* Now make the skeleton hold something.
 
 ### 4
 
