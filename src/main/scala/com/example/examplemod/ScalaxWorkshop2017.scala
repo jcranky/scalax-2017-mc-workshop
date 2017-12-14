@@ -41,5 +41,9 @@ object ScalaxWorkshop2017 extends EasyForger {
         """.stripMargin
       )
     )
+
+    smelting(
+      Items.APPLE to Items.CAKE
+    )
   }
 }

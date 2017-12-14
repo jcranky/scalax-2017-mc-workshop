@@ -46,7 +46,22 @@ dropJson = s"$modId:entities/ef_skeleton"
 ```
 * Do the same for the zombie.
 
-### Create a new custom recipe
+### Create a new custom smelting recipe
+
+* Run the game and try our some existing smelting recipes in the _Furnace_, to understand the game mechanics around that:
+  * Grab a bunch of _Raw Porkchops_, put them in the _Furnace_;
+  * Grab some _Coal_ and also put them in the _Furnace_;
+  * Try out some other recipes (https://www.minecraftcraftingguide.net/smelting-guide/).
+
+* Create a new smelting recipe to smelt an apple into a cake:
+
+```scala
+smelting(
+  Items.APPLE to Items.CAKE
+)
+```
+
+### Create a new custom crafting recipe
 
 * Run the game and try out some existing recipes in the _Crafting Table_, to understand the game mechanics around that:
   * Break a _coal block_ into individual coal pieces;
@@ -76,8 +91,6 @@ crafting(
 ```
 
 * Invent some other new recipes as you wish.
-
-### 6
 
 ### 7
 
