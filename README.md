@@ -46,7 +46,36 @@ dropJson = s"$modId:entities/ef_skeleton"
 ```
 * Do the same for the zombie.
 
-### 5
+### Create a new custom recipe
+
+* Run the game and try out some existing recipes in the _Crafting Table_, to understand the game mechanics around that:
+  * Break a _coal block_ into individual coal pieces;
+  * Create a _diamond sword_;
+  * Explore other recipes a bit: https://www.minecraftcraftingguide.net/ (or google for other guides).
+
+* Create a new crafting recipe to turn coal into diamond:
+
+```scala
+crafting(
+  Items.COAL to Items.DIAMOND
+)
+```
+
+* Change the recipe to be a shaped recipe:
+
+```scala
+crafting(
+  Items.COAL to Items.DIAMOND withShape(
+    """
+      |.cc
+      |..c
+      |...
+    """.stripMargin
+  )
+)
+```
+
+* Invent some other new recipes as you wish.
 
 ### 6
 

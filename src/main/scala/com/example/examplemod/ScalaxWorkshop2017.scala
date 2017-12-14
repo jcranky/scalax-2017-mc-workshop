@@ -31,5 +31,15 @@ object ScalaxWorkshop2017 extends EasyForger {
         )
       )
     )
+
+    crafting(
+      Items.COAL to Items.DIAMOND withShape(
+        """
+          |.cc
+          |..c
+          |...
+        """.stripMargin
+      )
+    )
   }
 }
