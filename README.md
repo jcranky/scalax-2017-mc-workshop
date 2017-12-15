@@ -90,9 +90,77 @@ crafting(
 )
 ```
 
-* Invent some other new recipes as you wish.
+* Create some other new recipes as you wish.
 
-### 7
+### Create a new custom Item: Explosion Rod
+
+* Create a new class for the item:
+
+```scala
+class ItemExplosionRod(modId: String) extends EFItem(modId, "explosionrod") {
+}
+```
+
+* Set the creative tab we will use to find the item inside the game:
+
+```scala
+setCreativeTab(CreativeTabs.MISC)
+```
+
+* Create the event handling that will trigger the explosion:
+
+```scala
+override def onEntitySwing(entity: EntityLivingBase, stack: ItemStack): Boolean = {
+}
+```
+
+* Implement the explosion logic:
+
+```scala
+val target = entity.rayTrace(100, 1f)
+    
+entity.world.createExplosion(
+  entity, target.getBlockPos.getX, target.getBlockPos.getY, target.getBlockPos.getZ, 4f, true)
+
+false
+```
+
+* Instantiate the new item:
+
+```scala
+val explosionRod = new ItemExplosionRod(modId)
+```
+
+* Inside `init`, register your item:
+
+```scala
+explosionRod.register()
+```
+
+* Open the game and test the rod.
+
+* Missing texture! Copy the texture file:
+
+Texture file: [Explosion Rod Texture](resources/explosionrod.png)
+
+Copy to folder: `src/main/resources/assets/$mod_id/textures/items`
+
+* Also copy the json texture model:
+  * double check the model id inside the file
+
+Texture model: [Explosion Rod Texture Model](resources/explosionrod.json)
+
+Copy to folder: `src/main/resources/assets/$mod_id/models/item`
+
+* Test it again!
+
+* Add a proper name to the item, copying the i18n file:
+
+i18n file: [i18n file](resources/en_US.lang)
+
+Copy to folder: `src/main/resources/assets/$mod_id/lang`
+
+* Add a custom recipe to allow creating an _Explosion Rod_ with the crafting table.
 
 ### 8
 
@@ -105,7 +173,3 @@ crafting(
 ### 12
 
 ### 13
-
-### 14
-
-### 15
