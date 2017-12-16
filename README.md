@@ -162,14 +162,42 @@ Copy to folder: `src/main/resources/assets/$mod_id/lang`
 
 * Add a custom recipe to allow creating an _Explosion Rod_ with the crafting table.
 
-### 8
+### 8 - Create a new Item, a Banana
 
-### 9
+* Create the new item class:
 
-### 10
+```scala
+class ItemBanana(modId: String) extends EFItemFood(modId, "banana", 5, 0.4f, false) {
+}
+```
 
-### 11
+* Add two potion effects to the item:
 
-### 12
+```scala
+setPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 9 * 20, 1), 1f)
+addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE, 5 * 20, 0), 0.5f)
+```
 
-### 13
+* Copy the texture and texture model files to the assets folder:
+
+Copy files: [Banana texture](resources/banana.png) and [Banana model json](resources/banana.json)
+
+Note: don't forget to double check the mod id in the model json.
+
+* Instantiate the new item:
+
+```scala
+val banana = new ItemBanana(modId)
+```
+
+* In the `init` method, register the new item:
+
+```scala
+banana.register()
+```
+
+* Start the game and test the new item.
+
+### 9 - new sword
+
+### 10 - new block, cloth
