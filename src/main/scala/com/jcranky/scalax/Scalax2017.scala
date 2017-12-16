@@ -12,6 +12,7 @@ object Scalax2017 extends EasyForger {
 
   val explosionRod = new ItemExplosionRod(modId)
   val banana = new ItemBanana(modId)
+  val venomSword = new ItemVenomSword(modId)
 
   @EventHandler
   def init(event: FMLInitializationEvent): Unit = {
@@ -19,6 +20,7 @@ object Scalax2017 extends EasyForger {
 
     explosionRod.register()
     banana.register()
+    venomSword.register()
 
     creatures( this,
       creeper(

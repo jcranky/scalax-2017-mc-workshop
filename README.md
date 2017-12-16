@@ -162,7 +162,7 @@ Copy to folder: `src/main/resources/assets/$mod_id/lang`
 
 * Add a custom recipe to allow creating an _Explosion Rod_ with the crafting table.
 
-### 8 - Create a new Item, a Banana
+### Create a new Item, a Banana
 
 * Create the new item class:
 
@@ -198,6 +198,42 @@ banana.register()
 
 * Start the game and test the new item.
 
-### 9 - new sword
+### Create a new Sword
+
+* Create the class for the Sword:
+
+```scala
+class ItemVenomSword(modId: String) extends EFItemSword(modId, "venomsword", ToolMaterial.IRON) {
+}
+```
+
+* Add the custom logic to run when hitting an enemy:
+
+```scala
+override def hitEntity(stack: ItemStack, target: EntityLivingBase, attacker: EntityLivingBase): Boolean = {
+  target.addPotionEffect(new PotionEffect(MobEffects.POISON, 3 * 20, 1, false, true))
+  super.hitEntity(stack, target, attacker)
+}
+```
+
+* Copy the texture and the texture model files:
+
+Copy files: [Sword texture](resources/venomsword.png) and [Sword model json](resources/venomsword.png).
+
+* Instantiate the item:
+
+```scala
+val venomSword = new ItemVenomSword(modId)
+```
+
+* And in the `init` method, register the item:
+
+```scala
+venomSword.register()
+```
+
+* Open the game and test it!
+
+* Sad news: potion effect if not being correct applied at this moment, bug?
 
 ### 10 - new block, cloth
