@@ -255,21 +255,21 @@ class BlockCloth(modId: String) extends EFBlock(modId, "clothblock", Material.CL
 
 Copy file: [Block texture](resources/clothblock.png)
 
-To folder: [Block textures folder](src/main/resources/assets/$mod_id/textures/blocks)
+To folder: `src/main/resources/assets/$mod_id/textures/blocks`
 
 * Copy the model json files:
 
 Copy item json model: [Block item json](resources/clothblock.json)
 
-To Folder: [Block item model folder](src/main/resources/assets/$mod_id/models/item)
+To Folder: `src/main/resources/assets/$mod_id/models/item`
 
 Copy Block json model: [Block model](resources/clothblock_model.json)
 
-To Folder: [Block model folder](src/main/resources/assets/$mod_id/models/block)
+To Folder: `src/main/resources/assets/$mod_id/models/block`
 
 Copy Block states model: [Block model](resources/states/clothblock.json)
 
-To Folder: [Block states folder](src/main/resources/assets/$mod_id/blockstates)
+To Folder: `src/main/resources/assets/$mod_id/blockstates`
 
 Note: double check the mod id in all json files!
 
