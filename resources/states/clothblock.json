@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "normal": { "model": "scalax_2017:clothblock_model" }
+  }
+}

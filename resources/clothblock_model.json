@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "scalax_2017:blocks/clothblock",
+    "up": "scalax_2017:blocks/clothblock",
+    "north": "scalax_2017:blocks/clothblock",
+    "east": "scalax_2017:blocks/clothblock",
+    "south": "scalax_2017:blocks/clothblock",
+    "west": "scalax_2017:blocks/clothblock",
+    "particle": "blocks/lapis_block"
+  }
+}

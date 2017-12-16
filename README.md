@@ -236,4 +236,61 @@ venomSword.register()
 
 * Sad news: potion effect if not being correct applied at this moment, bug?
 
-### 10 - new block, cloth
+### Create a new Block:
+
+* Create the class for the block and set it up:
+
+```scala
+class BlockCloth(modId: String) extends EFBlock(modId, "clothblock", Material.CLOTH) {
+  setHardness(0.5f)
+  setResistance(1.0f)
+  setSoundType(SoundType.WOOD)
+
+  dropItem = Items.BOOK
+  quantityDropped = 3
+}
+```
+
+* Copy the block texture file:
+
+Copy file: [Block texture](resources/clothblock.png)
+
+To folder: [Block textures folder](src/main/resources/assets/$mod_id/textures/blocks)
+
+* Copy the model json files:
+
+Copy item json model: [Block item json](resources/clothblock.json)
+
+To Folder: [Block item model folder](src/main/resources/assets/$mod_id/models/item)
+
+Copy Block json model: [Block model](resources/clothblock_model.json)
+
+To Folder: [Block model folder](src/main/resources/assets/$mod_id/models/block)
+
+Copy Block states model: [Block model](resources/states/clothblock.json)
+
+To Folder: [Block states folder](src/main/resources/assets/$mod_id/blockstates)
+
+Note: double check the mod id in all json files!
+
+* Instantiate the block:
+
+```scala
+val cloth = new BlockCloth(modId)
+```
+
+* Register the block and add a recipe to create it:
+
+```scala
+cloth.register()
+crafting(
+  Items.STRING to cloth withShape
+    """
+      |sss
+      |s.s
+      |sss
+    """.stripMargin
+)
+```
+
+* Open the game and test it!
